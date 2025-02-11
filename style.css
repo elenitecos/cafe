@@ -1,0 +1,76 @@
+h1 {
+    text-align: left;
+    padding-left: 35px;
+    font-family: "quesha";
+    font-weight: bold;
+    font-size: 40pt;
+}
+
+h2 {
+    text-align: left;
+    padding-left: 40px;
+    font-family: "quesha";
+    font-weight: bolder;
+    font-size: 25pt;
+}
+
+.custom-list li {
+    list-style-type: none;
+    font-family: "priori-sans";
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.custom-list img {
+    width: 300px;
+    height: auto;
+    border: 5px solid #FFFFFF;
+}
+
+body {
+    background-color: #F0E7DA;
+}
+
+#main {
+    background-color: #E8B5BC;
+    color: black;
+    border-radius: 15px;
+}
+
+#sidebar {
+    background-color: #EDCEC5;
+    color: black;
+    border-radius: 15px;
+}
+
+@font-face {
+    font-family: "quesha";
+    src: url("fonts/quesha.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "priori-sans";
+    src: url("fonts/priori-sans-regular.otf") format("opentype")
+}
+
+/*for mobile*/
+@media (max-width: 699px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/*for desktop*/
+@media (min-width: 700px) {
+#container {
+    display: flex;
+    gap: 10px;
+}
+#main {
+    width: 50%;
+}
+#sidebar {
+    width: 50%;
+}
+}
