@@ -10,3 +10,15 @@ const onClick = function () {
 }
 
 button.addEventListener("click", onClick)
+
+window.onload = function () {
+    document.querySelectorAll(".coffee-container").forEach(container => {
+        const steamElements = container.querySelectorAll(".steam");
+        container.addEventListener("mouseenter", () => {
+            steamElements.forEach(steam => steam.classList.add("show"));
+        });
+        container.addEventListener("mouseleave", () => {
+            steamElements.forEach(steam => steam.classList.remove("show"));
+        });
+    });
+};

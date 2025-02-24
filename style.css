@@ -75,6 +75,34 @@ body {
     animation: fadeIn 1s ease-out forwards;
 }
 
+.coffee-container {
+    position: relative;
+    display: inline-block;
+}
+
+.steam {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 20px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    filter: blur(5px);
+}
+
+@keyframes steamRise {
+    0% { opacity: 0; transform: translate(-50%, 10px) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -10px) scale(1.2); }
+    100% { opacity: 0; transform: translate(-50%, -40px) scale(1.4); }
+}
+
+.steam.show {
+    animation: steamRise 2s infinite ease-in-out;
+}
+
 @font-face {
     font-family: "quesha";
     src: url("fonts/quesha.ttf") format("truetype")
